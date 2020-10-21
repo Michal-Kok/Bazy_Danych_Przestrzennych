@@ -49,4 +49,6 @@ ORDER BY ST_Area(geometria) LIMIT 2;
 SELECT ST_Distance(budynek.geometria, punkt.geometria) FROM budynki budynek, punkty_informacyjne punkt
 WHERE budynek.nazwa = 'BuildingB' AND punkt.nazwa = 'G';
 
-SELECT ST_Area(ST_Difference((SELECT geometria FROM budynki WHERE nazwa = 'BuildingC'), ST_Buffer((SELECT geometria FROM budynki WHERE nazwa = 'BuildingB'),0.5)));
+SELECT ST_Area(ST_Difference((SELECT geometria FROM budynki WHERE nazwa = 'BuildingC'), ST_Buffer((SELECT geometria FROM budynki WHERE nazwa = 'BuildingB'),0.5))); 
+
+-- ostatnie zadanie nie chciało mi działać
